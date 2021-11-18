@@ -9,7 +9,7 @@ const shopSlice = createSlice({
   name: 'shop',
   initialState,
   reducers: {
-    setCategory(state, action) { state.categoryID = action.payload },
+    setCategoryID(state, action) { state.categoryID = action.payload },
     setQuery(state, action) { state.query = action.payload },
   },
 });
