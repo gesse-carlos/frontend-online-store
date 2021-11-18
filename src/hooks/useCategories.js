@@ -5,14 +5,10 @@ function useCategories() {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      try {
-        const response = await fetch('https://api.mercadolibre.com/sites/MLB/categories');
-        const result = await response.json();
+      const url = "https://api.mercadolibre.com/sites/MLB/categories";
+      const result = await (await fetch(url)).json();
 
-        setCategories(result);
-      } catch (error) {
-        setCategories([{ id: 0, name: 'Categories not found' }]);
-      }
+      setCategories(result);
     }
 
     fetchCategories();

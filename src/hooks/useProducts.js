@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
-function useProducts(categoryID, query) {
+function useProducts(categoryId, query) {
   const [products, setProducts] = useState([]);
-  const url = `https://api.mercadolibre.com/sites/MLB/search?category=${categoryID}&q=${query}`;
 
   useEffect(() => {
     const fetchProducts = async () => {
+      const url = `https://api.mercadolibre.com/sites/MLB/search?category=${categoryId}&q=${query}`;
       const { results } = await (await fetch(url)).json();
 
       setProducts(results);
     }
 
     fetchProducts();
-  }, [url]);
+  }, [categoryId, query]);
 
   return { products };
 }
