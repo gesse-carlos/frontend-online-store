@@ -3,8 +3,7 @@ import { CategoriesList } from '../components';
 
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="home-page-container">
       <CategoriesList />
     </div>
   );
