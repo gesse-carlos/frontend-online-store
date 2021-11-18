@@ -67,7 +67,7 @@ const { string, number } = PropTypes;
 ProductCard.propTypes = {
   title: string,
   img: string,
-  price: number,
+  price: string,
   id: string,
   quantity: number,
 };
