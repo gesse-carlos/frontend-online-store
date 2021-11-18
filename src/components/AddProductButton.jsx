@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IoIosCart } from "react-icons/io";
 import { cartActions } from '../redux/reducer/cart';
 
+import { CartButton } from './styled-components';
+
 function AddProductButton({ title, img, price, id }) {
   const dispatch = useDispatch();
   const productsInCart = useSelector((state) => state.cart.products);
@@ -22,13 +24,13 @@ function AddProductButton({ title, img, price, id }) {
   );
 
   return (
-    <button
+    <CartButton
       type="button"
       className="add-cart-button"
       onClick={ handleClick }
     >
       <IoIosCart />
-    </button>
+    </CartButton>
   );
 }
 

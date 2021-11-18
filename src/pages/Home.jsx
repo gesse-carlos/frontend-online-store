@@ -5,6 +5,8 @@ import { BsFillCartFill, BsSearch } from "react-icons/bs";
 import { shopActions } from '../redux/reducer/shop';
 import { Input, CategoriesList, ProductsContainer } from '../components';
 
+import { Header, HeaderButton } from './styled-components';
+
 function Home() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -13,7 +15,7 @@ function Home() {
   const handleClick = () => dispatch(shopActions.setQuery(query));
   return (
     <main>
-      <header className="search-container">
+      <Header className="search-container">
         <Input
           type="text"
           name="products-query"
@@ -21,19 +23,19 @@ function Home() {
           className="search-products-input"
           onChange={ handleChange }
         />
-        <button
+        <HeaderButton
           type="button"
           onClick={ handleClick }
         >
-          <BsSearch />
-        </button>
-        <button
+          <BsSearch className="icon-svg" />
+        </HeaderButton>
+        <HeaderButton
           type="button"
           onClick={ () => history.push('/cart') }
         >
-          <BsFillCartFill />
-        </button>
-      </header>
+          <BsFillCartFill className="icon-svg" />
+        </HeaderButton>
+      </Header>
       <CategoriesList />
       <ProductsContainer />
     </main>

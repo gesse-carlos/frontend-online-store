@@ -4,11 +4,13 @@ import { shopActions } from '../redux/reducer/shop';
 import useCategories from '../hooks/useCategories';
 import { Input } from '.';
 
+import { Aside } from './styled-components';
+
 function CategoriesList() {
   const dispatch = useDispatch();
   const { categories } = useCategories();
   return (
-    <aside className="categories-container">
+    <Aside className="categories-container">
       { categories && categories.map((category) => (
         <Input
           type="radio"
@@ -21,7 +23,7 @@ function CategoriesList() {
           onClick={ () => dispatch(shopActions.setCategoryID(category.id)) }
         />
       )) }
-    </aside>
+    </Aside>
   );
 }
 
