@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Select({ labelText, name, options, className, id}) {
+function Select({ labelText, name, options, className, id, onChange }) {
   return (
     <label htmlFor={ name }>
       { labelText }
@@ -17,6 +18,17 @@ function Select({ labelText, name, options, className, id}) {
       </Select>
     </label>
   );
+}
+
+const { string, func, arrayOf } = PropTypes;
+
+Select.propTypes = {
+  labelText: string,
+  name: string.isRequired,
+  options: arrayOf(string).isRequired,
+  className: string,
+  id: string,
+  onChange: func.isRequired,
 }
 
 export default Select;

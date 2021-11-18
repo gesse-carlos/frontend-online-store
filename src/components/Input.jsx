@@ -1,30 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Input({ type, value, name, className, id, labelText}) {
+function Input(
+  { id, name, type, testID, className, labelText, onChange, placeHolder, value, onClick }
+) {
   return (
     <label htmlFor={ name }>
-      { labelText }
       <input
         type={ type }
-        value={ value }
-        className={ className }
         id={ id }
         name={ name }
+        data-testid={ testID }
+        className={ className }
+        onChange={ onChange }
+        onClick={ onClick }
+        placeholder={ placeHolder }
+        value={ value }
       />
+      { labelText }
     </label>
   );
 }
 
-const { string } = PropTypes;
+const { string, func } = PropTypes;
 
 Input.propTypes = {
-  type: string.isRequired,
-  value: string,
-  name: string.isRequired,
-  className: string,
   id: string,
+  name: string.isRequired,
+  type: string.isRequired,
+  testID: string,
+  className: string.isRequired,
   labelText: string,
-};
+  onChange: func,
+  onClick: func,
+}
 
 export default Input;
