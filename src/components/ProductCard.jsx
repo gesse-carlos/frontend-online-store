@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import { cartActions } from '../redux/reducer/cart';
 import { AddProductButton } from '.';
 
+import { Product } from './styled-components';
+
 function ProductCard({ title, img, price, id, quantity }) {
   const dispatch = useDispatch();
 
@@ -42,7 +44,7 @@ function ProductCard({ title, img, price, id, quantity }) {
   );
 
   return (
-    <div className="product-card">
+    <Product className="product-card">
       <Link to={ `product=${id}` }>
         <img className="product-logo" src={ img } alt={ `${title}-logo` } />
       </Link>
@@ -58,7 +60,7 @@ function ProductCard({ title, img, price, id, quantity }) {
         />
       }
       { quantity && cartElements }
-    </div>
+    </Product>
   );
 }
 

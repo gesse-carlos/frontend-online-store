@@ -7,5 +7,9 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: #F8F4E4;
+  background-color: #353846;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
