@@ -22,6 +22,7 @@ export const ProductsList = styled.main`
   width: 75%;
   max-height: 100vh;
   overflow: scroll;
+  align-items: center;
 `;
 
 export const CartButton = styled.button`
@@ -38,5 +39,7 @@ export const CartButton = styled.button`
 export const Product = styled.div`
   margin-left: 10px;
   margin-top: 10px;
-  border: 1px solid red;
+  padding: 10px;
+  border: 1px solid #F8F4E4;
+  border-radius: 1%;
 `;
