@@ -18,7 +18,7 @@ function ProductsContainer() {
             key={ product.id }
             title={ product.title }
             img={ product.thumbnail }
-            price={ `R$ ${product.price}` }
+            price={ `R$ ${product.price.toFixed(2)}` }
             id={ product.id }
           />
         ))

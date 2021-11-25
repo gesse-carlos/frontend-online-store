@@ -6,10 +6,11 @@ export const Aside = styled.aside`
   flex-direction: column;
   float: left;
   width: 25%;
-  height: 100%;
-  background-color: #43A5B5;
+  height: 90vh;
+  background-color: #235E52;
   border-radius: 1%;
   overflow: scroll;
+  overflow-x: hidden;
 `;
 
 export const ProductsList = styled.main`
@@ -20,8 +21,9 @@ export const ProductsList = styled.main`
   flex-direction: column;
   margin-left: 25%;
   width: 75%;
-  max-height: 100vh;
+  max-height: 90vh;
   overflow: scroll;
+  overflow-x: hidden;
   align-items: center;
 `;
 

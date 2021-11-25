@@ -15,7 +15,7 @@ function Cart() {
       <button
         type="button"
         onClick={ () => history.goBack() }
-        className="goBack-button"
+        className="header-button"
       >
         <BsArrowReturnLeft />
       </button>
@@ -24,12 +24,12 @@ function Cart() {
   )
 
   return (
-    <main className="cart-container">
+    <div className="cart-container">
       <header className="cart-header">
         <button
           type="button"
           onClick={ () => history.goBack() }
-          className="goBack-button"
+          className="header-button"
         >
           <BsArrowReturnLeft />
         </button>
@@ -42,19 +42,21 @@ function Cart() {
           Clear Cart
         </button>
       </header>
-      {
-        products.map((product) => (
-          <ProductCard
-            key={ product.id }
-            title={ product.title }
-            img={ product.img }
-            price={ product.price }
-            id={ product.id }
-            quantity={ product.quantity }
-          />
-        ))
-      }
-    </main>
+      <main className="cart-products-container">
+        {
+          products.map((product) => (
+            <ProductCard
+              key={ product.id }
+              title={ product.title }
+              img={ product.img }
+              price={ product.price }
+              id={ product.id }
+              quantity={ product.quantity }
+            />
+          ))
+        }
+      </main>
+    </div>
   );
 }
 

@@ -14,6 +14,125 @@
   max-width: 7vw;
 }
 
-.product-title {
-  max-width: 40vw;
+.product-details-header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #43A5B5;
+  height: 10vh;
+}
+
+.header-button {
+  background-color: whitesmoke;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 5vw;
+  margin-right: 5px;
+  font-size: 2rem;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  background: #43A5B5;
+  height: 8vh;
+}
+
+.cart-products-container {
+  max-height: 92vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.clear-cart-button {
+  background-color: whitesmoke;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 8vw;
+  margin-left: 10px;
+}
+
+.quantity-buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.quantity-button {
+  background-color: whitesmoke;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 4vw;
+  font-size: 20px;
+}
+
+.quantity-label {
+  margin: 0 10px 0 10px;
+}
+
+.remove-product-button {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.remove-button {
+  background-color: whitesmoke;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 4vw;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.header-title-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  align-self: center;
+  color: black;
+}
+
+.product-container {
+  display: flex;
+  height: 80vh;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.product-image {
+  width: 20rem;
+}
+
+.add-cart-button {
+  background-color: whitesmoke;
+  border: 1px solid white;
+  cursor: pointer;
+  width: 5vw;
+  margin-right: 5px;
+  font-size: 2rem;
+}
+
+.product-especifications {
+  border: 2px solid #D1CBBC;
+  border-radius: 1%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-self: center;
+  max-height: 80vh;
+  width: 50vw;
+  flex-wrap: wrap;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
+.product-attribute {
+  margin-right: 10px;
 }

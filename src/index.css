@@ -7,9 +7,8 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: #353846;
-}
-
-::-webkit-scrollbar {
-  display: none;
+  background: #353846;
+  color: whitesmoke;
+  font-family: 'Red Hat Mono', monospace;
+  font-weight: bold;
 }

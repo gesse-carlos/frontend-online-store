@@ -17,29 +17,34 @@ function ProductCard({ title, img, price, id, quantity }) {
   }
 
   const cartElements = (
-    <section>
-      <button
-        type="button"
-        className="quantity-button"
-        onClick={ handleQuantity }
-      >
-        <IoIosRemoveCircle />
-      </button>
-      <p className="quantity-label">{ quantity }</p>
-      <button
-        type="button"
-        className="quantity-button"
-        onClick={ () => dispatch(cartActions.increaseQuantity(id)) }
-      >
-        <IoIosAddCircle />
-      </button>
-      <button
-        type="button"
-        className="remove-button"
-        onClick={ () => dispatch(cartActions.removeProduct(id)) }
-      >
-        <IoMdTrash />
-      </button>
+    <section className="cart-product-buttons">
+      <div className="quantity-buttons">
+        <button
+          type="button"
+          className="quantity-button"
+          onClick={ handleQuantity }
+        >
+          <IoIosRemoveCircle />
+        </button>
+        <span className="quantity-label">{ quantity }</span>
+        <button
+          type="button"
+          className="quantity-button"
+          onClick={ () => dispatch(cartActions.increaseQuantity(id)) }
+        >
+          <IoIosAddCircle />
+        </button>
+
+        <span className="remove-product-button">
+          <button
+          type="button"
+          className="remove-button"
+          onClick={ () => dispatch(cartActions.removeProduct(id)) }
+          >
+            <IoMdTrash />
+          </button>
+        </span>
+      </div>
     </section>
   );
 

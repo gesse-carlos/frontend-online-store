@@ -32,31 +32,41 @@ function ProductDetails() {
   return (
     <div className="product-details-container">
       <header className="product-details-header">
+        <span className="header-title-container">
+          <h1 className="header-title">{ product.title }</h1>
+        </span>
         <button
           type="button"
           onClick={ () => history.goBack() }
-          className="goBack-button"
+          className="header-button"
         >
           <BsArrowReturnLeft />
         </button>
         <button
           type="button"
           onClick={ () => history.push('/cart') }
+          className="header-button"
         >
           <BsFillCartFill />
         </button>
       </header>
 
-      <main className="product-card">
-        <h1 className="product-title">{ `${ product.title } - ${ product.price }` }</h1>
-        <img src={ product.thumbnail } alt={ `${ product.title}-logo` } />
-        <button
-          type="button"
-          className="add-cart-button"
-          onClick={ handleClick }
-        >
-          <IoIosCart />
-        </button>
+      <main className="product-container">
+        <section className="product-card">
+          <img
+            src={ product.thumbnail }
+            alt={ `${ product.title}-logo` }
+            className="product-image"
+          />
+          <h1 className="product-price">{ `R$${product.price.toFixed(2)}` }</h1>
+          <button
+            type="button"
+            className="add-cart-button"
+            onClick={ handleClick }
+          >
+            <IoIosCart />
+          </button>
+        </section>
         <section className="product-especifications">
           {
             product.attributes.map((attribute) => (
